@@ -16,6 +16,13 @@ def make_hermite():
         [1, -1, 0, 0]
     ]
 
+def copy_matrix( a ):
+    b = new_matrix()
+    for r in range( len(a) ):
+        for c in range( len(a) ):
+            b[c][r] = a[c][r]
+    return b
+
 def generate_curve_coefs( p0, p1, p2, p3, t ):
     coefs = [[p0, p1, p2, p3]]
     if t == 'hermite':
